@@ -2,9 +2,10 @@
   "name": "invoice.generator",
   "version": "1.0.0",
   "description": "Generates pdf invoices",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Manoj",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "bson": "^4.0.2",
     "btoa": "^1.2.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "file-system": "^2.2.2",
     "iframe": "^1.0.0",
@@ -22,7 +24,10 @@
     "kerberos": "^1.1.2",
     "mongodb": "^3.2.7",
     "mongodb-core": "^3.2.7",
+    "mongodb-uri": "^0.9.7",
     "mongoose": "^5.5.15",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
     "pdfkit": "^0.9.1",
     "stream-to-blob-url": "^2.1.1"
   }
