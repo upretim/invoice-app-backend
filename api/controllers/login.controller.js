@@ -1,19 +1,9 @@
-getAuth =  (req, res)=> {
-    const users =
-    {
-        id: 1,
-        username: 'Test@test',
-        password: 'test',
-        firstName: 'Manoj',
-        lastName: 'User'
-    };
-    if (req.body.username == users.username && req.body.password == users.password) {
-        const user = users.firstName;
-        res.status(200).send(user);
-    }
-    else {
-        res.status(404).send(null);
-    }
+exports.getAuth = (req, res) => {
+    console.log('username ', req.body.username);
+    console.log('password ', req.body.password);
+    res.status(200).json({
+        username: req.body.username,
+        password: req.body.password
+    })
 }
 
-module.exports = getAuth;
