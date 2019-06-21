@@ -16,11 +16,17 @@ app.use(bodyParser.json());
 
 mongoose.connect(
   process.env.MONGO_URI,
-  { useNewUrlParser: true }
-).then((db) => {
+  { useNewUrlParser: true ,
+    dbName: "InvoiceDatabase"}
+).then(() => {
   console.log('DB Connected');
-})
- 
+},
+(error)=>{
+  console.log('Error in connecting db', error)
+}
+)
+;
+
 mongoose.connection.on('error', err => {
   console.log(`DB connection error: ${err.message}`)
 });
@@ -35,7 +41,6 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
-
 
 
 
