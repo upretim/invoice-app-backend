@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "file-system": "^2.2.2",
     "iframe": "^1.0.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "kerberos": "^1.1.2",
     "mongodb": "^3.2.7",
     "mongodb-core": "^3.2.7",
